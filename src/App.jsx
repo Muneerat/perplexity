@@ -8,9 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Layout>
-      <div className=' bg-red'>Munie</div>
-    </Layout>
+    <div>Home</div>
   )
 }
 
