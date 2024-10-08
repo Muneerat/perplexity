@@ -3,64 +3,70 @@ import { SideBar } from "../components/sideBar";
 import { Menu } from "../components/menu";
 import { SubBlog } from "../components/subBlog";
 import quantum from "../assets/quantum.png";
+import { MenuBox } from "../components/menuBox";
+import { Link } from "react-router-dom";
+import smallBlogs from "../Data/blog";
 
-const smallBlogs = [
-  { img: 'Top',header: 'Quantum Computer Doom Challenge', text: 'According to PC Gamer, the quantum computer adaptation of the iconic game DOOM, known as Quandoom, faces significant technical challenges due to its requirement fo.' },
-  { img: 'Top',header: 'Quantum Computer Doom Challenge', text: 'According to PC Gamer, the quantum computer adaptation of the iconic game DOOM, known as Quandoom, faces significant technical challenges due to its requirement fo.' },
-  { img: 'Top',header: 'Quantum Computer Doom Challenge', text: 'According to PC Gamer, the quantum computer adaptation of the iconic game DOOM, known as Quandoom, faces significant technical challenges due to its requirement fo.' },
-];
-const textBlog = (text,maxLength) =>{
+
+const textBlog = (text, maxLength) => {
   if (text.length > maxLength) {
     return text.slice(0, maxLength) + "...";
   }
   return text;
-}
+};
 
 export const Discover = () => {
   return (
-    <div>
+    <div className=" max-w-6xl mx-auto w-full h-full ">
       <Menu />
-      <SubBlog
-        img={quantum}
-        header="Quantum Computer Doom Challenge"
-        text="According to PC Gamer, the quantum computer adaptation of the iconic
+      <div className="flex">
+        <div className="w-full">
+        <Link to={`/discover/10`} key={1}>
+          <SubBlog
+            img={quantum}
+            header="Quantum Computer Doom Challenge"
+            text="According to PC Gamer, the quantum computer adaptation of the iconic
             game DOOM, known as Quandoom, faces significant technical challenges
             due to its requirement fo.."
-      />
-      <div className="md:flex gap-2">
-      { smallBlogs.map((smallBlog, index) => (
-       <SubBlog
-         key={index}
-         img={quantum}
-         header={smallBlog.header}
-         text={textBlog(smallBlog.text,50)}
-         className='md:w-[13%] text-xs p-0'
-       >
-
-       </SubBlog>
-     ))}
-      </div>
-      <SubBlog
-        img={quantum}
-        header="Quantum Computer Doom Challenge"
-        text="According to PC Gamer, the quantum computer adaptation of the iconic
+          />
+          </Link>
+          <div className="md:flex flex-col md:flex-row  gap-2">
+            {smallBlogs.map((smallBlog, index) => (
+              <Link to={`/discover/${index}`} key={index}>
+                <SubBlog
+                  img={quantum}
+                  header={smallBlog.header}
+                  text={textBlog(smallBlog.text, 50)}
+                  className="md:w-[29.4%] text-xs p-0"
+                ></SubBlog>
+              </Link>
+            ))}
+          </div>
+          <SubBlog
+            img={quantum}
+            header="Quantum Computer Doom Challenge"
+            text="According to PC Gamer, the quantum computer adaptation of the iconic
             game DOOM, known as Quandoom, faces significant technical challenges
             due to its requirement fo.."
-      />
-      <div className="md:flex gap-2">
-      { smallBlogs.map((smallBlog, index) => (
-       <SubBlog
-         key={index}
-         img={quantum}
-         header={smallBlog.header}
-         text={textBlog(smallBlog.text,50)}
-         className='md:w-[13%] text-xs p-0'
-       >
-
-       </SubBlog>
-     ))}
+          />
+          <div className="md:flex gap-2 w-fit">
+            {smallBlogs.map((smallBlog, index) => (
+              <SubBlog
+                key={index}
+                img={quantum}
+                header={smallBlog.header}
+                text={textBlog(smallBlog.text, 50)}
+                className="md:w-[13%] text-xs p-0"
+              ></SubBlog>
+            ))}
+          </div>
+        </div>
+        <div>
+          <MenuBox />
+        </div>
       </div>
-   
     </div>
   );
 };
+
+export default Discover;

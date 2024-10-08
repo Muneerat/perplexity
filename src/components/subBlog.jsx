@@ -4,7 +4,7 @@ import thumbnail from "../assets/thumbnail.avif";
 import { Link } from "react-router-dom";
 import { Bookmark } from "../assets/Icon";
 
-export const SubBlog = ({ className, img, header, text,prop }) => {
+export const SubBlog = ({ className, img, header, text,prop,key }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const handleBookmark = () => {
@@ -12,9 +12,9 @@ export const SubBlog = ({ className, img, header, text,prop }) => {
   };
   return (
     <div
-      className={`w-[40%] p-2 flex flex-col items-center justify-center ${className}`}
+      className={`w-[90%] p-2 flex flex-col items-center justify-center ${className}`}
     >
-      <Link>
+      <Link key={key}>
         <img
           src={img}
           alt="image"

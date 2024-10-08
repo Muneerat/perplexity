@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 import { Navbar } from "./navbar";
 export const Layout = () => {
   return (
-    <div className="bg-primary flex">
+    <div className="bg-primary flex w-full">
       <SideBar />
       <div className="bg-[#fff] w-full m-3 rounded-md ">
-        <div className=" flex flex-col justify-start mx-auto ">
+        <div className=" flex flex-col justify-start mx-auto">
           <Navbar />
           <div className="w-full h-[1px] bg-[#e2e2e1]"></div>
           <Outlet />
