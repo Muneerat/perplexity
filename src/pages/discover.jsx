@@ -30,14 +30,13 @@ export const Discover = () => {
             due to its requirement fo.."
           />
           </Link>
-          <div className="md:flex flex-col md:flex-row  gap-2">
+          <div className="md:flex flex-col md:flex-row">
             {smallBlogs.map((smallBlog, index) => (
-              <Link to={`/discover/${index}`} key={index}>
+              <Link to={`/discover/${index}`} key={index}   className="md:w-[31%] text-xs p-0">
                 <SubBlog
                   img={quantum}
                   header={smallBlog.header}
                   text={textBlog(smallBlog.text, 50)}
-                  className="md:w-[29.4%] text-xs p-0"
                 ></SubBlog>
               </Link>
             ))}

@@ -14,7 +14,6 @@ export const SubBlog = ({ className, img, header, text,prop,key }) => {
     <div
       className={`w-[90%] p-2 flex flex-col items-center justify-center ${className}`}
     >
-      <Link key={key}>
         <img
           src={img}
           alt="image"
@@ -55,7 +54,6 @@ export const SubBlog = ({ className, img, header, text,prop,key }) => {
             </div>
           </div>
         </div>
-      </Link>
     </div>
   );
 };

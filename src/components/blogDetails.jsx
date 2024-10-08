@@ -8,7 +8,9 @@ export const BlogDetails = () => {
   return (
     <div>
         Blog Details: {id}
-    
+    <div>
+        {}
+    </div>
 
 
     </div>
