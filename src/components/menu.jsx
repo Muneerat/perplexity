@@ -3,16 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 const menus = [
   { name: 'Top', path: '/discover' },
-  { name: 'Tech & Science', path: '/tech-science' },
-  { name: 'Finance', path: '/tech-science' },
-  { name: 'Art & Culture', path: '/art-culture' },
+  { name: 'Tech & Science', path: '/' },
+  { name: 'Finance', path: '/' },
+  { name: 'Art & Culture', path: '/' },
   { name: 'Sports', path: '/sports' },
-  { name: 'Entertainment', path: '/entertainment' }
+  { name: 'Entertainment', path: '/' }
 ];
 
 export const Menu = () => {
   return (
-    <nav className="flex justify- p-4 w-4/6">
+    <nav className="flex justify- font-medium  text-xs p-4 w-4/6">
       {menus.map((menu, index) => (
         <NavLink
           key={index}
