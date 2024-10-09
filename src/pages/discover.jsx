@@ -31,10 +31,10 @@ export const Discover = () => {
           />
           </Link>
           <div className="md:flex flex-col md:flex-row">
-            {smallBlogs.map((smallBlog, index) => (
-              <Link to={`/discover/${index}`} key={index}   className="md:w-[31%] text-xs p-0">
+            {smallBlogs.map((smallBlog) => (
+              <Link to={`/discover/${smallBlog.id}`} key={smallBlog.id}   className="md:w-[31%] text-xs p-0">
                 <SubBlog
-                  img={quantum}
+                  img={smallBlog.blog}
                   header={smallBlog.header}
                   text={textBlog(smallBlog.text, 50)}
                 ></SubBlog>

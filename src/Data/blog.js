@@ -1,6 +1,8 @@
+import quantum from "../assets/quantum.png";
 const smallBlogs = [
     {
-      img: "Top",
+      id: 1,
+      img: quantum,
       header: "Quantum Computer Doom Challenge",
       text: "According to PC Gamer, the quantum computer adaptation of the iconic game DOOM, known as Quandoom, faces significant technical challenges due to its requirement fo.",
     },
