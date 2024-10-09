@@ -4,9 +4,12 @@ import { ArrowUp, Discover, HomeIcon, Library, Logo } from "../assets/Icon";
 
 export const SideBar = () => {
   return (
-    <nav className="px-6 py-3 w-[40%] max-w-64 w- w- h-screen  overflow-y-auto scrollbar-thin sticky top-0 flex justify-between flex-col">
+    <nav className="px-6 py-3 w-[40%] max-w-64 w- w- h-screen  overflow-y-auto scrollbar-thin sticky top-0 hidden md:flex justify-between flex-col">
       <div>
+        <div className=" text-general fill-general">
+
         <Logo height={50} width={130} />
+        </div>
         <div className="text-secondary bg-[#fff] px-3 py-2  border-[#f0f0ea] border rounded-full cursor-pointer hover:border-general flex my-1">
           <h4 className="font-medium">New Thread</h4>
           <span className="border border-[#f0f0ea] rounded px-1 py-1 mx-1 h-5 flex justify-center  items-center font-light">

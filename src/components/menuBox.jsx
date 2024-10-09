@@ -11,7 +11,7 @@ import { Art, Entertainment, Finance, Sport, Star, Tech } from '../assets/Icon';
 
 export const MenuBox = () => {
   return (
-    <div className=" bg-primary rounded-lg py-2 px-4 w-5/6">
+    <div className=" bg-primary rounded-lg py-2 px-4 w-5/6 md:block hidden">
       <div >
         <h1 className="text-lg font-medium text-general py-1">Make it yours</h1>
         <p className="py-1 text-[#757570]">

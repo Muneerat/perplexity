@@ -5,6 +5,7 @@ import { SubBlog } from "./subBlog";
 import thumbnail from "../assets/thumbnail.avif";
 import { Bookmark, Eyes, Share, Time } from "../assets/Icon";
 import Toggle from "./toggle";
+import favicon1 from "../assets/faviconV1.png"
 
 export const BlogDetails = () => {
   const { id } = useParams();
@@ -56,10 +57,66 @@ export const BlogDetails = () => {
                 72,376 qubits and 80 million quantum gates, far exceeding the
                 capabilities of today's most advanced quantum computers.
               </p>
-             
-       
+
+              <div className="flex gap-4 text-sm">
+                <div className="bg-primary text-[#13343b] rounded-lg p-2">
+                  <h1 className="font-medium">
+                  'DOOM' is finally being ported to quantum computers, but there are ...
+                  </h1>
+                  <div className="flex items-center gap-2 ">
+                    <img
+                      src={favicon1}
+                      alt="favicon1"
+                      className=" rounded-full w-6 flex"
+                    />
+                    <p>cnbc . 1</p>
+                  </div>
+                </div>
+                <div className="bg-primary text-[#13343b] rounded-lg p-2">
+                  <p>
+                  'DOOM' is finally being ported to quantum computers, but there are ...
+                  </p>
+                  <div className="flex items-center gap-2 ">
+                    <img
+                      src={favicon1}
+                      alt="favicon1"
+                      className=" rounded-full w-6 flex"
+                    />
+                    <p>cnbc . 1</p>
+                  </div>
+                </div>
+                <div className="bg-primary text-[#13343b] rounded-lg">
+                  <p>
+                    Taiwan's energy crunch could throw a wrench in to global
+                    chip industry
+                  </p>
+                  <div className="flex items-center gap-2 ">
+                    <img
+                      src={thumbnail}
+                      alt="thumbnail"
+                      className=" rounded-full w-6 flex"
+                    />
+                    <p>cnbc . 1</p>
+                  </div>
+                </div>
+                <div className="bg-primary text-[#13343b] rounded-lg">
+                  <p>
+                    Taiwan's energy crunch could throw a wrench in to global
+                    chip industry
+                  </p>
+                  <div className="flex items-center gap-2 ">
+                    <img
+                      src={thumbnail}
+                      alt="thumbnail"
+                      className=" rounded-full w-6 flex"
+                    />
+                    <p>cnbc . 1</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Chat bot */}
-              <div className="sticky flex items-center justify-center bottom-10 w-full  rounded-full bg-[#f3f3ee]">
+              {/* <div className="sticky flex items-center justify-center bottom-10 w-full  rounded-full bg-[#f3f3ee]">
                 <div className=" sticky flex items-center bottom-10 justify-center border border-[#e7e7e6] text-[#797977] shadow-md w-full  rounded-full m-2 bg-white">
                   <input
                     placeholder="Ask follow-up"
@@ -71,11 +128,11 @@ export const BlogDetails = () => {
                     </div>
                     <h1 className="font-medium">Pro</h1>
                     <div className="h-10 bg-[#f3f3ee] w-10 rounded-full  flex justify-center items-center">
-                      <Share width={18} height={18} /> 
+                      <Share width={18} height={18} />
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div>Introduction</div>
           </div>

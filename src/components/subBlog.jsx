@@ -19,7 +19,7 @@ export const SubBlog = ({ className, img, header, text,prop,key }) => {
           alt="image"
           className="rounded-t-lg w-full  object-fill object- object-center"
         />
-        <div className="bg-primary rounded-b-lg py-2 px-2">
+        <div className="bg-primary rounded-b-lg py-2 px-2 w-full">
           <h3 className=" text-[#13343b] font-semibold py-1">{header}</h3>
           <p className="text-[#797977]">
             {text}
