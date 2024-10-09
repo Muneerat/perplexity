@@ -116,7 +116,7 @@ export const BlogDetails = () => {
               </div>
 
               {/* Chat bot */}
-              {/* <div className="sticky flex items-center justify-center bottom-10 w-full  rounded-full bg-[#f3f3ee]">
+              <div className="sticky flex items-center justify-center bottom-10 w-full  rounded-full bg-[#f3f3ee]">
                 <div className=" sticky flex items-center bottom-10 justify-center border border-[#e7e7e6] text-[#797977] shadow-md w-full  rounded-full m-2 bg-white">
                   <input
                     placeholder="Ask follow-up"
@@ -132,7 +132,7 @@ export const BlogDetails = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
             <div>Introduction</div>
           </div>
