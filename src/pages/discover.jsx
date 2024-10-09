@@ -5,7 +5,7 @@ import { SubBlog } from "../components/subBlog";
 import quantum from "../assets/quantum.png";
 import { MenuBox } from "../components/menuBox";
 import { Link } from "react-router-dom";
-import smallBlogs from "../Data/blog";
+import smallBlogs, { mediumBlogs } from "../Data/blog";
 
 
 const textBlog = (text, maxLength) => {
@@ -21,44 +21,28 @@ export const Discover = () => {
       <Menu />
       <div className="flex">
         <div className="w-full">
-        <Link to={`/discover/10`} key={1}>
-          <SubBlog
-            img={quantum}
-            header="Quantum Computer Doom Challenge"
-            text="According to PC Gamer, the quantum computer adaptation of the iconic
-            game DOOM, known as Quandoom, faces significant technical challenges
-            due to its requirement fo.."
-          />
-          </Link>
+          {mediumBlogs.map((mediumBlog) => (
+              <Link to={`/discover/${mediumBlog.id}`} key={1}>
+              <SubBlog
+                img={mediumBlog.img}
+                header={mediumBlog.header}
+                text={mediumBlog.text}
+              />
+              </Link>
+          ))}
+      
           <div className="md:flex flex-col md:flex-row">
             {smallBlogs.map((smallBlog) => (
               <Link to={`/discover/${smallBlog.id}`} key={smallBlog.id}   className="md:w-[31%] text-xs p-0">
                 <SubBlog
-                  img={smallBlog.blog}
+                  img={smallBlog.img}
                   header={smallBlog.header}
                   text={textBlog(smallBlog.text, 50)}
                 ></SubBlog>
               </Link>
             ))}
           </div>
-          <SubBlog
-            img={quantum}
-            header="Quantum Computer Doom Challenge"
-            text="According to PC Gamer, the quantum computer adaptation of the iconic
-            game DOOM, known as Quandoom, faces significant technical challenges
-            due to its requirement fo.."
-          />
-          <div className="md:flex gap-2 w-fit">
-            {smallBlogs.map((smallBlog, index) => (
-              <SubBlog
-                key={index}
-                img={quantum}
-                header={smallBlog.header}
-                text={textBlog(smallBlog.text, 50)}
-                className="md:w-[13%] text-xs p-0"
-              ></SubBlog>
-            ))}
-          </div>
+       
         </div>
         <div>
           <MenuBox />
