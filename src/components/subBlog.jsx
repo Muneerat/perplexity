@@ -4,7 +4,7 @@ import thumbnail from "../assets/thumbnail.avif";
 import { Link } from "react-router-dom";
 import { Bookmark } from "../assets/Icon";
 
-export const SubBlog = ({ className, img, header, text,prop,key }) => {
+export const SubBlog = ({ className, img, header, text,prop,imgClass }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const handleBookmark = () => {
@@ -12,14 +12,17 @@ export const SubBlog = ({ className, img, header, text,prop,key }) => {
   };
   return (
     <div
-      className={`w-[90%] p-2 flex flex-col items-center justify-center ${className}`}
+      className={`w-full flex flex-col items-center justify-center mb-4 ${className}`}
     >
+      <div className={`w-full  bg-gray-200 flex items-center justify-center ${imgClass}`}>
         <img
           src={img}
           alt="image"
-          className="rounded-t-lg w-full  object-fill object- object-center"
+          className={`rounded-t-lg w-full h-full !object-cover transition-all ease-in-out  duration-200 hover:translate-y-1 `}
         />
-        <div className="bg-primary rounded-b-lg py-2 px-2 w-full">
+
+      </div>
+        <div className="bg-primary  rounded-b-lg py-2 px-2  w-full h-1/2  flex flex-col">
           <h3 className=" text-[#13343b] font-semibold py-1">{header}</h3>
           <p className="text-[#797977]">
             {text}
@@ -57,3 +60,5 @@ export const SubBlog = ({ className, img, header, text,prop,key }) => {
     </div>
   );
 };
+
+export default SubBlog 

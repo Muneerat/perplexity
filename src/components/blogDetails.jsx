@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import smallBlogs from "../Data/blog";
+import smallBlogs, { allBlogs } from "../Data/blog";
 import { SubBlog } from "./subBlog";
 import thumbnail from "../assets/thumbnail.avif";
 import { Bookmark, Eyes, Share, Time } from "../assets/Icon";
@@ -9,7 +9,7 @@ import favicon1 from "../assets/faviconV1.png"
 
 export const BlogDetails = () => {
   const { id } = useParams();
-  const blog = smallBlogs.find((blog) => blog.id === parseInt(id));
+  const blog = allBlogs.find((blog) => blog.id === parseInt(id));
 
   return (
     <div className=" max-w-7xl mx-auto ">
