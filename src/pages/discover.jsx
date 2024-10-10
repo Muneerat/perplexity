@@ -32,7 +32,7 @@ export const Discover = () => {
                 imgClass=''
               />
               </Link>
-              <div className="flex gap-5 mb-5 items-center w-">
+              <div className="md:flex gap-5 mb-5 items-center w-">
               {smallBlogs.slice(smallBlogIndex, smallBlogIndex+3).map((smallBlog ) => (
                 <Link to={`/discover/${smallBlog.id}`} key={smallBlog.id}   className="w-full h-full object-cover text-xs p-0">
                   <SubBlog
@@ -48,9 +48,6 @@ export const Discover = () => {
             </>
               
           ))}
-      
-     
-       
         </div>
         <div>
           <MenuBox />

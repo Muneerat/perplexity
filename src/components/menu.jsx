@@ -14,7 +14,7 @@ const menus = [
 
 export const Menu = () => {
   return (
-    <nav className="flex justify- font-medium  text-xs p-4 w-full my- shadow-m sticky top-0 z-50 bg-white opacity-95 ">
+    <nav className="flex justify- font-medium  text-xs p-4 w-full my- shadow-m sticky top-0 z-50 bg-white opacity-95 overflow-x-auto">
       {menus.map((menu, index) => (
         <NavLink
           key={index}
